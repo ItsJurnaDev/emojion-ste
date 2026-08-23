@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "category": "Bahagia",
+        "emoji": "https://.../bahagia.png"
+    },
+    {
+        "id": 2,
+        "category": "Sedih",
+        "emoji": "https://.../sedih.png"
+    },
+    {
+        "id": 3,
+        "category": "Galau",
+        "emoji": "https://.../galau.png"
+    },
+    {
+        "id": 4,
+        "category": "Marah",
+        "emoji": "https://.../marah.png"
+    },
+    {
+        "id": 5,
+        "category": "Romantis",
+        "emoji": "https://.../romantis.png"
+    }
+]
