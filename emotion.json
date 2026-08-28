@@ -1,27 +1,22 @@
 [
     {
-        "id": 1,
-        "category": "Bahagia",
-        "emoji": "https://.../bahagia.png"
+        "quote": "Musik mengungkapkan apa yang tidak bisa diucapkan dan yang tidak mungkin untuk didiamkan.",
+        "author": "— Victor Hugo",
+        "image_url": "https://hips.hearstapps.com/hmg-prod/images/gettyimages-89861094.jpg"
     },
     {
-        "id": 2,
-        "category": "Sedih",
-        "emoji": "https://.../sedih.png"
+        "quote": "Musik tidak menggantikan kata-kata, ia memberikan nada pada kata-kata tersebut.",
+        "author": "— Elie Wiesel ",
+        "image_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgW6t9jfRcjWFn6LuZHoKjS-WU7tnQD1X5QwuIGb9443n69ZiE3Kzd9PBXuxRErEfLlWc1-gYrs8Mb5DlX-vFAZNKf-LMIX9uAaSPQDWBzOsSZEbcufySIjWg0fq8Zo57_fuN2G/s1600/Elie+Wiesel+DC+1996+sq+sm.jpg"
     },
     {
-        "id": 3,
-        "category": "Galau",
-        "emoji": "https://.../galau.png"
+        "quote": "Setidaknya aku pernah mencoba menyampaikan expresiku, Andaipun tertolak. Kuteriakkan dalam sunyi",
+        "author": "— Dede Jurnal",
+        "image_url": ""
     },
     {
-        "id": 4,
-        "category": "Marah",
-        "emoji": "https://.../marah.png"
-    },
-    {
-        "id": 5,
-        "category": "Ricci Israel",
-        "emoji": "https://.../romantis.png"
+        "quote": "Seni adalah penyampaian emosi yang telah dialami oleh sang seniman.",
+        "author": "— Leo Tolstoy",
+        "image_url": "https://cdn.britannica.com/60/134960-050-1CAF909E/photograph-Leo-Tolstoy-Russian.jpg"
     }
 ]
