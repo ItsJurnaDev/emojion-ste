@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send The Emotion</title>
+
+    <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/search.css">
+</head>
+
+<body>
+    <header>
+        <!-- Logo -->
+        <a href="../index.html" class="logo">
+            <img src="../assets/images/logo.svg" alt="Send The Emotion">
+            <span class="logo-text">Send The Expresion<br>Make it Reliever</span>
+        </a>
+
+        <!-- Hamburger -->
+        <button class="hamburger" id="hamburger-btn" aria-label="Toggle Navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- Navigasi -->
+        <nav id="nav-menu">
+            <a href="../pages/send-message.html" class="nav-link">KIRIM<br>EXPRESIMU</a>
+            <a href="../pages/search.html" class="nav-link">CARI</a>
+            <a href="../pages/trending.html" class="nav-link">TRENDING</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Header untuk search -->
+        <div class="search-header">
+            <h1>Cari Pesan</h1>
+            <p>Masukkan nama penerima untuk mencari pesan yang sudah dikirimkan</p>
+
+            <div class="input-box">
+                <i class="uil uil-search"></i>
+                <input type="text" placeholder="Search here..." />
+                <button class="button">Search</button>
+            </div>
+        </div>
+
+        <!-- Bagian untuk menampilkan card hasil pencarian -->
+        <div class="search-results">
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Jurnal Project. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Modal Detail Pesan -->
+    <!-- Modal Detail Pesan -->
+    <div id="detail-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button id="close-modal" class="close-btn">&times;</button>
+
+            <div class="modal-body">
+                <h2 class="modal-title">Detail Pesan</h2>
+                <div class="modal-recipient">
+                    To: <strong id="modal-name"></strong>
+                </div>
+
+                <div class="modal-header-info">
+                    <span>Merasa :</span>
+                    <span id="modal-category" class="category"></span>
+                </div>
+
+                <div class="modal-message-box">
+                    <p id="modal-message"></p>
+                </div>
+
+                <!-- Custom Music Card (Mirip Player di Form) -->
+                <div class="selected-music-card" id="modal-music-card">
+                    <div class="player-top-row">
+                        <div class="left-content">
+                            <img id="modal-cover" src="" alt="Cover" class="music-cover">
+                            <div class="music-info">
+                                <span id="modal-track" class="track-title"></span>
+                                <span id="modal-artist" class="artist-name"></span>
+                            </div>
+                        </div>
+                        <div class="right-content">
+                            <button type="button" class="btn-play-music" id="modal-btn-play"
+                                title="Putar preview">▶</button>
+                        </div>
+                    </div>
+
+                    <!-- Progress Bar dan Waktu -->
+                    <div class="progress-wrapper">
+                        <span class="audio-timer" id="modal-current-time">0:00</span>
+                        <div class="progress-bar-container" id="modal-progress-bar-container">
+                            <div class="progress-bar-fill" id="modal-progress-bar-fill"></div>
+                        </div>
+                        <span class="audio-timer" id="modal-duration">0:30</span>
+                    </div>
+                </div>
+
+                <!-- Native Audio Element (Hidden) -->
+                <audio id="modal-audio" preload="metadata"></audio>
+
+                <div class="modal-footer-date">
+                    <span id="modal-date" class="modal-date"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/search.js"></script>
+</body>
+
+</html>

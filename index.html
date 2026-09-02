@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send The Emotion</title>
+
+    <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/card-display.css">
+</head>
+
+<body>
+    <header>
+        <!-- Logo -->
+        <a href="#" class="logo">
+            <img src="assets/images/logo.svg" alt="Send The Emotion">
+            <span class="logo-text">Send The Expresion<br>Make it Reliever</span>
+        </a>
+
+        <!-- Hamburger -->
+        <button class="hamburger" id="hamburger-btn" aria-label="Toggle Navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- Navigasi -->
+        <nav id="nav-menu">
+            <a href="pages/send-message.html" class="nav-link">KIRIM<br>EXPRESIMU</a>
+            <a href="pages/search.html" class="nav-link">CARI</a>
+            <a href="pages/trending.html" class="nav-link">TRENDING</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero untuk header main content web -->
+        <div class="hero">
+            <h1>Sampaikan Expresi Dengan Kata dan Lagu</h1>
+            <p>~ Dede Jurnal Kurniadi~</p>
+
+            <p>Ungkapkan Pesan Tak Tersampaikanmu <br>
+                Dengan Lagu</p>
+
+                <!-- Bagian untuk memulai web  -->
+            <div id="play">
+                <a href="pages/send-message.html" id="btn-message">
+                    <img class="icon" src="assets/icons/write-icon.png" alt="">
+                    Ayo Buat Pesanku</a>
+                <a href="pages/search.html" id="btn-browse">
+                    <img class="icon" src="assets/icons/browse-icon.png" alt="search">
+                    Cari Pesanmu</a>
+            </div>
+
+            <!-- Menampilkab quotes dari ahli dan teman teman pub -->
+            <div id="content"></div>
+
+            <div class="card-display-section">
+                <!-- Card Display senang geser kiri -->
+                <div class="card-display slider-left">
+                    <div class="slider-content" id="cat-senang"></div>
+                </div>
+
+                <!-- Card Display sedih geser kanan -->
+                <div class="card-display slider-right">
+                    <div class="slider-content" id="cat-sedih"></div>
+                </div>
+
+                <!-- Card Display jatuh cinta geser kiri -->
+                <div class="card-display slider-left">
+                    <div class="slider-content" id="cat-jatuh-cinta"></div>
+                </div>
+
+                <!-- Card Display kesal geser kanan -->
+                <div class="card-display slider-right">
+                    <div class="slider-content" id="cat-kesal"></div>
+                </div>
+
+                <!-- Card Display kaget geser kiri -->
+                <div class="card-display slider-left">
+                    <div class="slider-content" id="cat-kaget"></div>
+                </div>
+            </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Jurnal Project. All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/card-display.js"></script>
+</body>
+
+</html>

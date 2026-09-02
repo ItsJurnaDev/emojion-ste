@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send The Emotion</title>
+
+    <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/trending.css">
+</head>
+
+<body>
+    <header>
+        <!-- Logo -->
+        <a href="../index.html" class="logo">
+            <img src="../assets/images/logo.svg" alt="Send The Emotion">
+            <span class="logo-text">Send The Expresion<br>Make it Reliever</span>
+        </a>
+
+        <!-- Hamburger -->
+        <button class="hamburger" id="hamburger-btn" aria-label="Toggle Navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- Navigasi -->
+        <nav id="nav-menu">
+            <a href="../pages/send-message.html" class="nav-link">KIRIM<br>EXPRESIMU</a>
+            <a href="../pages/search.html" class="nav-link">CARI</a>
+            <a href="../pages/trending.html" class="nav-link">TRENDING</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Container untuk daftar trending lagu -->
+        <div class="trending-container">
+            <h2 class="trending-title">Trending Lagu Sering Dikirim</h2>
+            <p class="trending-description">Daftar lagu yang paling sering dikirim oleh pengguna kami. Tekan pada lagu
+                untuk menggunakan lagunya.</p>
+            <div class="trending-table-wrapper">
+                <table class="trending-table">
+                    <thead>
+                        <tr>
+                            <th class="col-num">No</th>
+                            <th class="col-title">Judul</th>
+                            <th class="col-album">Album / Detail</th>
+                            <th class="col-category">Category</th>
+                        </tr>
+                    </thead>
+
+                    <!-- Bagian body datanya dirender di js melalui ID -->
+                    <tbody id="trending-table-body">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Jurnal Project. All Rights Reserved.</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/trending.js"></script>
+</body>
+
+</html>

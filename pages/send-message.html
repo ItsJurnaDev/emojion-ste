@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send The Emotion</title>
+
+    <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/form.css">
+
+</head>
+
+<body>
+    <header>
+        <!-- Logo -->
+        <a href="../index.html" class="logo">
+            <img src="../assets/images/logo.svg" alt="Send The Emotion">
+            <span class="logo-text">Send The Expresion<br>Make it Reliever</span>
+        </a>
+
+        <!-- Hamburger -->
+        <button class="hamburger" id="hamburger-btn" aria-label="Toggle Navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- Navigasi -->
+        <nav id="nav-menu">
+            <a href="../pages/send-message.html" class="nav-link">KIRIM<br>EXPRESIMU</a>
+            <a href="../pages/search.html" class="nav-link">CARI</a>
+            <a href="../pages/trending.html" class="nav-link">TRENDING</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Membuat announce card untuk klarifikasi web -->
+        <div id="announce-card">
+            <img src="../assets/icons/info.png" alt="info" class="icon">
+
+            <div id="announce-info">
+                <p>Perhatian!! Pesan Tidak Dapat Dihapus</p>
+                <p>
+                    Pesan yang sudah kamu kirimkan tidak dapat dihapus,
+                    jadi mohon pastikan bahwa pesan yang kamu tuliskan benar
+                    sebelum menyelesaikannya.
+                </p>
+            </div>
+        </div>
+
+        <!-- Container untuk formulir -->
+        <div class="form-card">
+            <!-- Formulir untuk mengirim pesan -->
+            <form id="send-song-form" action="index.html">
+                <label for="form-name">Masukkan Nama Penerima</label>
+                <input type="text" id="form-name" name="name" required>
+
+                <label for="category">Bagaimana Perasaanmu</label>
+                <select name="category" id="category" required>
+                    <option value="" disabled selected>Pilih kategori</option>
+                    <option value="happy">Senang</option>
+                    <option value="sad">Sedih</option>
+                    <option value="love">Jatuh Cinta</option>
+                    <option value="angry">Kesal</option>
+                    <option value="surprised">Kaget</option>
+                </select>
+
+                <label for="message">Pesan</label>
+                <textarea name="message" id="message" required></textarea>
+
+                <label for="music">Pilih Music</label>
+                <div class="music-container">
+                    <input type="text" name="music_search" id="music" placeholder="Cari lagu..." autocomplete="off">
+                    <div class="music-list" id="music-list"></div>
+
+                    <!-- Preview Lagu, Audio Player, Progress Bar -->
+                    <div class="selected-music-card" id="selected-music-card">
+                        <div class="player-top-row">
+                            <div class="left-content">
+                                <img id="selected-cover" src="" alt="Cover" class="music-cover">
+                                <div class="music-info">
+                                    <span id="selected-title" class="track-title"></span>
+                                    <span id="selected-artist" class="artist-name"></span>
+                                </div>
+                            </div>
+                            <div class="right-content">
+                                <button type="button" class="btn-play-music" id="btn-play" title="Putar preview"
+                                    aria-label="Putar preview">▶</button>
+                                <button type="button" class="btn-cancel-music" id="btn-cancel" title="Batal pilih lagu"
+                                    aria-label="Batal pilih lagu">✕</button>
+                            </div>
+                        </div>
+
+                        <!-- Progress Bar dan Waktu -->
+                        <div class="progress-wrapper">
+                            <span class="audio-timer" id="current-time-text">0:00</span>
+                            <div class="progress-bar-container" id="progress-bar-container">
+                                <div class="progress-bar-fill" id="progress-bar-fill"></div>
+                            </div>
+                            <span class="audio-timer" id="duration-text">0:30</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- subbmit -->
+                <audio id="audio-preview" preload="none"></audio>
+                <button type="submit" class="btn-submit" disabled>Kirim Pesan</button>
+            </form>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Jurnal Project. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Modal Pop-Up Custom -->
+    <div id="custom-modal" class="modal-overlay">
+        <div class="modal-box">
+            <div class="modal-icon">✔</div>
+            <h3 id="modal-title">Berhasil!</h3>
+            <p id="modal-message">Pesan berhasil disimpan!</p>
+            <button id="modal-btn-close" class="btn-modal">OK</button>
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/form.js"></script>
+
+</body>
+
+</html>

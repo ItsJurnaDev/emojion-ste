@@ -1,0 +1,469 @@
+@import url('https://fonts.googleapis.com/css2?family=Lacquer&family=Short+Stack&family=Shadows+Into+Light&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    animation: fadeIn 0.25s ease-in-out;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+}
+
+.shadows-into-light-regular {
+    font-family: "Shadows Into Light", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* 
+    HEADER
+*/
+/* Header */
+header {
+    font-family: "Short Stack", cursive;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* Logo dikunci ke kiri, Nav/Hamburger dikunci ke kanan */
+    padding: 0 5vw;
+    background-color: #fff;
+    z-index: 1000;
+    border-bottom: 1px solid #FFE4E1;
+}
+
+/* Logo di Posisi Kiri */
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    height: 100%;
+    flex-shrink: 0;
+    /* Mencegah logo mengecil saat element mengecil */
+    color: #000;
+}
+
+/* logo dari gambar */
+.logo img {
+    height: 55%;
+}
+
+/* logo dari teks */
+.logo-text {
+    display: block !important;
+    font-size: clamp(0.7rem, 1.2vw, 0.85rem);
+    line-height: 1.1;
+    white-space: nowrap;
+    /* Melarang web untuk membuat baris baru */
+}
+
+/* mengatur navigasi agar responsive dan item berada ditengah */
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1.8rem;
+    /*jarak antar link navigasi*/
+    flex-shrink: 0;
+}
+
+
+header nav a {
+    text-align: center;
+    line-height: 1.1;
+    white-space: nowrap;
+    color: #333;
+    font-size: 0.85rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: 50px;
+    background-color: transparent;
+    transition: background-color 0.25s ease, color 0.25s ease;
+    /* Membuat transisi warna background dan teks saat hover dan active, menjadikan transisi smooth */
+}
+
+header nav a:hover {
+    background-color: #87CEFA;
+    color: #f5f5f5;
+}
+
+header nav a:active {
+    background-color: #FF1493;
+    color: #f5f5f5;
+}
+
+/* Tombol Hamburger jika resolusi lebar */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 26px;
+    height: 18px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+}
+
+/* Memunculkan 3 garis pada tombol hamburger */
+.hamburger span {
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* mengubah span atas agar miring */
+.hamburger.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+/* menghilangkan span tengah  */
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+/* mengubah span bawah agar miring */
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* 
+Main 
+*/
+/* Menurunkan main default agar tidak tertutup header */
+main {
+    padding-top: 5rem;
+    flex: 1;
+    /* memaksa agar main mengisi ruang kosong yang tersisa di body*/
+}
+
+/* Header landing page web*/
+.hero {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Mengatur teks agar pas dengan container */
+.hero h1,
+.hero p,
+.hero #play {
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Judul Hero */
+.hero h1 {
+    font-family: "Lacquer", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3rem;
+    line-height: 1.4;
+}
+
+/* signature */
+.hero p:nth-of-type(1) {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #8a8b8c;
+}
+
+/* guide teks */
+.hero p:nth-of-type(2) {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #656565;
+}
+
+/* Container tombol pada hero */
+#play {
+    margin-top: 1rem;
+    gap: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 15px;
+}
+
+/* Ukuran default icon */
+.icon {
+    height: 1em;
+    width: auto;
+    vertical-align: middle;
+    margin-right: 0.3rem;
+}
+
+
+#btn-message,
+#btn-browse {
+    color: #000;
+    padding: 8px 10px;
+    border-radius: 10px;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.281);
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+#btn-message {
+    color: #fff;
+    background-color: #000;
+}
+
+
+#btn-message img {
+    filter: invert(1);
+}
+
+#btn-message:hover {
+    background-color: #87CEFA;
+    color: #010101;
+}
+
+#btn-message:hover img {
+    filter: invert(0);
+}
+
+/* membuat agar element quote tersusun secara grid column*/
+#content {
+    margin-top: 2em;
+    display: grid;
+    gap: 1.5rem;
+    padding: 1rem;
+    grid-template-columns: 1fr;
+}
+
+
+/* card quote menjadi 2 kolom */
+.card-quotes {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    /* mengambil seukuran pas konten, 1fr mengisi sisa ruang yang ada */
+    align-items: center;
+    row-gap: 0.2em;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: border 0.5s ease;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.card-quotes:hover {
+    border: 1px solid black;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-quotes img {
+    grid-row: 1 / 3;
+    width: 75px;
+    height: auto;
+    padding-right: 0.8rem;
+    margin-right: 0.8rem;
+    border-right: 1px solid grey;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card-quotes blockquote {
+    margin: 0;
+    font-size: 0.95rem;
+    align-self: flex-end;
+}
+
+.card-quotes cite {
+    margin: 0;
+    font-size: 0.85rem;
+    color: gray;
+    align-self: flex-start;
+}
+
+footer {
+    height: 3rem;
+    border-top: solid rgb(232, 232, 232) 1px;
+    margin-top: auto;
+    text-align: center;
+}
+
+.potong-teks {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Responsive */
+@media (min-width: 601px) and (max-width: 900px) {
+    #content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card-quotes:nth-child(3) {
+        grid-column: 1 / -1;
+        justify-self: center;
+        width: 100%;
+        max-width: calc(50% - 0.75rem);
+    }
+}
+
+@media (min-width: 901px) {
+    #content {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* LAYAR KECIL / MOBILE (<= 768px) */
+@media (max-width: 768px) {
+    header {
+        justify-content: space-between;
+        padding: 0 5vw;
+    }
+
+    /* Kunci Logo Tetap Kiri */
+    header .logo {
+        margin-right: auto;
+    }
+
+    /* Tampilkan Hamburger di Kanan */
+    .hamburger {
+        display: flex;
+    }
+
+    /* Navbar berubah jadi Dropdown */
+    header nav {
+        position: absolute;
+        top: 3.5rem;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0;
+        gap: 0.8rem;
+        border-bottom: 1px solid #FFE4E1;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+
+        /* Tersembunyi Default */
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: all 0.3s ease;
+    }
+
+    /* Muncul saat hamburger diklik */
+    header nav.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    header nav a {
+        font-size: 0.9rem;
+        width: 80%;
+        padding: 0.5rem 0;
+    }
+
+    .hero h1,
+    .hero p,
+    .hero #play {
+        width: 80%;
+        max-width: 80%;
+    }
+
+    #announce-card {
+        width: 90%;
+        padding: 15px;
+        gap: 10px;
+    }
+
+    #announce-card .icon {
+        width: 25px;
+        height: 25px;
+    }
+
+    #announce-info p {
+        font-size: 14px;
+    }
+
+    .form-card {
+        width: 90%;
+        padding: 1.5rem;
+    }
+
+    .form-card input[type="text"],
+    .form-card select,
+    .music-wrapper input#music,
+    .music-list,
+    .selected-music-card {
+        width: 100% !important;
+    }
+
+    .btn-submit {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .hero h1,
+    .hero p,
+    .hero #play {
+        width: 95%;
+        max-width: 95%;
+    }
+
+    .hero h1 {
+        font-size: 1.6rem;
+    }
+
+    .hero p {
+        font-size: 0.85rem;
+    }
+
+    .form-card {
+        padding: 1.2rem;
+        border-radius: 12px;
+    }
+
+    .form-card label {
+        font-size: 0.85rem;
+    }
+}
